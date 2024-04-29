@@ -8,3 +8,5 @@ This is a collection of computational resources
 ### Genomics
 
 ### Python
+
+### Data Visualisation
