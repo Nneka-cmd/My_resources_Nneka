@@ -9,3 +9,5 @@ This is a collection of computational and data resources for Sorghum and Wheat
 
 ### [Wheat genomic resourses](https://wheat.pw.usda.gov/GG3/)
 
+### [Morris Lab publication](https://www.morrislab.org/publications)
+
