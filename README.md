@@ -1,5 +1,5 @@
 # My_resources_Nneka
-This is a collection of computational and data resources for Sorghum and Wheat
+___This is a collection of computational and data resources for Sorghum and Wheat___
 
 ### [Phytozome](https://phytozome-next.jgi.doe.gov/)
 
