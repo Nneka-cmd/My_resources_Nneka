@@ -1,16 +1,11 @@
 # My_resources_Nneka
-This is a collection of computational resources
+This is a collection of computational and data resources for Sorghum and Wheat
 
-## R
+### [Phytozome](https://phytozome-next.jgi.doe.gov/)
 
-### Plotting
+### [Sorghum resources](https://www.sorghumbase.org/)
 
-### Genomics
+### [Sorghum DRYAD](https://datadryad.org/search?utf8=%E2%9C%93&q=sorghum)
 
-### Python
+### [Wheat genomic resourses](https://wheat.pw.usda.gov/GG3/)
 
-### Data Visualisation
-
-### Microbiome
-
-### Flying Monkies
