@@ -11,3 +11,4 @@ ___This is a collection of computational and data resources for Sorghum and Whea
 
 ### [Morris Lab publication](https://www.morrislab.org/publications)
 
+### [Olatoye et al, 2020](https://figshare.com/s/ae874edd86775a9d1b1d?file=21940179)
