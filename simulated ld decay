@@ -1,0 +1,41 @@
+library(ggplot2)
+
+set.seed(123)
+
+# Distances between SNP pairs (kb)
+dist_kb <- seq(1, 200, by = 5)
+
+# Helper: exponential decay with some noise
+ld_curve <- function(d, r2_0, decay, noise_sd = 0.02) {
+  r2 <- r2_0 * exp(-decay * d) + rnorm(length(d), 0, noise_sd)
+  pmax(pmin(r2, 1), 0)  # keep in [0,1]
+}
+
+# Wild population (baseline decay)
+r2_wild <- ld_curve(dist_kb, r2_0 = 0.6, decay = 0.03)
+
+# Domesticated under DRIFT: similar or slightly higher LD, similar decay
+r2_dom_drift <- ld_curve(dist_kb, r2_0 = 0.7, decay = 0.03)
+
+# Domesticated under SELECTION: slower LD decay (longer haplotypes)
+r2_dom_sel <- ld_curve(dist_kb, r2_0 = 0.8, decay = 0.01)
+
+# Put into a single data frame
+ld_df <- data.frame(
+  Distance_kb = rep(dist_kb, times = 3),
+  r2          = c(r2_wild, r2_dom_drift, r2_dom_sel),
+  Population  = factor(rep(c("Wild",
+                             "Domesticated (drift)",
+                             "Domesticated (selection)"),
+                           each = length(dist_kb)))
+)
+
+# Plot LD decay curves
+ggplot(ld_df, aes(x = Distance_kb, y = r2, color = Population)) +
+  geom_line(size = 1) +
+  theme_classic() +
+  labs(
+    title = "Simulated LD decay under drift vs selection",
+    x = "Distance between SNPs (kb)",
+    y = expression(LD~(r^2))
+  )
